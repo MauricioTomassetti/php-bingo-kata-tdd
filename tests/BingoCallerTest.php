@@ -16,7 +16,7 @@ class BingoCallerTest extends TestCase
         $this->assertTrue($number >= 1 && $number <= 75);
     }
 
-    public function testWhebCalls75TimesAllNumbersArePresent()
+    public function testWhenCalls75TimesAllNumbersArePresent()
     {
         $caller = new BingoCaller();
         $callsNumbers = [];
@@ -25,6 +25,8 @@ class BingoCallerTest extends TestCase
         for ($i = 1; $i <= 75; $i++) {
             $callsNumbers[] = $caller->callNumber();
         }
+
+        sort($callsNumbers);
 
         $this->assertEquals($expectedNumbers, $callsNumbers);
     }
