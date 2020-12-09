@@ -7,13 +7,13 @@ class BingoCaller
 
     public function __construct()
     {
-
+        $this->numbers = [];
     }
 
     public function callNumber()
     {
         do {
-            $number =  rand(1, 75);
+            $number =  rand(BingoRules::MIN_CARD_NUMBER, BingoRules::MAX_CARD_NUMBER);
         } while (in_array($number, $this->numbers));
 
         $this->numbers[] = $number;

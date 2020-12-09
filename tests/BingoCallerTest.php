@@ -11,16 +11,16 @@ class BingoCallerTest extends TestCase
         $number = $caller->callNumber();
 
         //Valdiate assert conditional.
-        $this->assertTrue($number >= 1 && $number <= 75);
+        $this->assertTrue($number >= BingoRules::MIN_CARD_NUMBER && $number <= BingoRules::MAX_CARD_NUMBER);
     }
 
     public function testWhenCalls75TimesAllNumbersArePresent()
     {
         $caller = new BingoCaller();
         $callsNumbers = [];
-        $expectedNumbers = range(1, 75);
+        $expectedNumbers = range(BingoRules::MIN_CARD_NUMBER, BingoRules::MAX_CARD_NUMBER);
 
-        for ($i = 1; $i <= 75; $i++) {
+        for ($i = 1; $i <= 75; ++$i) {
             $callsNumbers[] = $caller->callNumber();
         }
 
