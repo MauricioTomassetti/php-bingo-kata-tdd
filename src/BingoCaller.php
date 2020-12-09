@@ -7,7 +7,7 @@ class BingoCaller
 
     public function __construct()
     {
-        
+
     }
 
     public function callNumber()
@@ -19,5 +19,9 @@ class BingoCaller
         $this->numbers[] = $number;
 
         return $number;
+    }
+
+    public function hasCallNumber($number):bool {
+        return in_array($number, $this->numbers);
     }
 }
