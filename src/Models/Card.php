@@ -36,13 +36,21 @@ class Card
 
     }
 
-    private function columnHasElementsBetween($column, $min, $max): bool
+    private function columnHasElementsBetween($column, $min, $max, $allowNull=false): bool
     {
         foreach ($column as $number) {
+            if($allowNull && is_null($number))
+                continue;
+
             if ($number < $min || $number > $max){
                 return false;
             }
         return true;
         }
+    }
+
+    public function hasFreeSpaceInTheMiddle()
+    {
+        return is_null($this->grid['N'][2]);
     }
 }

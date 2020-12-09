@@ -14,6 +14,8 @@ or tweak the way it works.
 - We need a Bingo card generator
 - Every Bingo card has 25 unique spaces
 - Each column contains numbers between $loweBound and $upperBound (include).
+- There is 1 free space at the middle of the generated card.
+
 
 |Column | Lower bound | Upper bound |
 |-------| ----------- | ----------- |
