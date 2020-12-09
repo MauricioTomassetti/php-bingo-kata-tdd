@@ -1,7 +1,5 @@
 <?php
 
-namespace App;
-
 class BingoCaller
 {
 
@@ -9,6 +7,7 @@ class BingoCaller
 
     public function __construct()
     {
+        
     }
 
     public function callNumber()

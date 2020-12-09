@@ -1,8 +1,6 @@
 <?php
 
-namespace tests;
-
-use App\BingoCaller;
+use BingoCaller;
 use PHPUnit\Framework\TestCase;
 
 class BingoCallerTest extends TestCase
@@ -30,4 +28,6 @@ class BingoCallerTest extends TestCase
 
         $this->assertEquals($expectedNumbers, $callsNumbers);
     }
+
+
 }
